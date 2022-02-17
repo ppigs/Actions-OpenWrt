@@ -21,19 +21,19 @@ sed -i "s/OpenWrt/abbw_k1/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i "s/encryption=none/encryption=psk2\n			set wireless.default_radio\$\{devidx\}.key=147258369/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改版本号
-sed -i "s/OpenWrt /@笨蛋海绵 编译 OpenWrt 于 $(TZ=UTC-8 date "+%Y.%m.%d")/g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /@笨蛋海绵 编译于 $(TZ=UTC-8 date "+%Y.%m.%d") OpenWrt/g" package/lean/default-settings/files/zzz-default-settings
 
 # 修改时区
 sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
+
+# 修改默认主题
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 删除默认主题
 #sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
 #sed -i '/\+luci-theme-bootstrap/d' package/feeds/luci/luci/Makefile
 #sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' .config
 #sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-
-# 修改默认主题
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 添加内核编译用户
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
