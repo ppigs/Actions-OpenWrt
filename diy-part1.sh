@@ -15,7 +15,7 @@
 
 # 添加 feed 源
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # adguardhome插件
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
@@ -23,4 +23,4 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 # git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 
 # Edge主题
-git clone -b 18.06 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
+# git clone -b 18.06 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
