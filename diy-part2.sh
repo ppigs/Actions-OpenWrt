@@ -27,7 +27,7 @@ sed -i "s/OpenWrt /@笨蛋海绵 编译于 $(TZ=UTC-8 date "+%Y.%m.%d") OpenWrt/
 sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 # 修改默认主题
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 删除默认主题
 #sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
