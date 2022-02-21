@@ -16,7 +16,10 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        wget https://github.com/coolsnowwolf/lede/archive/refs/tags/20211107.zip
-        unzip 20211107.zip > /dev/null
-        cd lede-20211107
+        #wget https://github.com/coolsnowwolf/lede/archive/refs/tags/20211107.zip
+        #unzip 20211107.zip > /dev/null
+        #cd lede-20211107
+        #ls
+        wget https://github.com/coolsnowwolf/lede/releases/download/20211107/openwrt-x64-R21.11.11-squashfs-combined-efi.rar
+        unrar openwrt-x64-R21.11.11-squashfs-combined-efi.rar
         ls
