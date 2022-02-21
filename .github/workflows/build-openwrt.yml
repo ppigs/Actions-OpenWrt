@@ -17,5 +17,6 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         wget https://github.com/coolsnowwolf/lede/archive/refs/tags/20211107.zip
-        unzip 20211107.zip
+        unzip 20211107.zip > /dev/null
+        cd lede-20211107
         ls
