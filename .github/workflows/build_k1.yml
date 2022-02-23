@@ -47,9 +47,9 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        wget https://github.com/coolsnowwolf/lede/archive/refs/tags/20211107.zip > /dev/null
-        unzip 20211107.zip > /dev/null
-        mv lede-20211107 openwrt
+        wget https://github.com/coolsnowwolf/lede/archive/refs/tags/20200408.zip > /dev/null
+        unzip 20200408.zip > /dev/null
+        mv lede-20200408 openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
       run: |
